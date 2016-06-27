@@ -52,7 +52,8 @@ webpackJsonp([2],{
 	  var newStyle = (0, _objectAssign2.default)({}, style, {
 	    display: show ? '' : 'none'
 	  });
-	  return _react2.default.createElement('div', _extends({}, props, { style: newStyle }));
+	  return _react2.default.createElement('div', _extends({}, props, { style: newStyle, __self: undefined
+	  }));
 	};
 	
 	Div.propTypes = {
@@ -87,39 +88,53 @@ webpackJsonp([2],{
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        'label',
-	        null,
+	        {
+	          __self: this
+	        },
 	        _react2.default.createElement('input', {
 	          type: 'checkbox',
 	          onChange: this.toggle.bind(this, 'enter'),
-	          checked: this.state.enter
+	          checked: this.state.enter,
+	          __self: this
 	        }),
 	        'show'
 	      ),
 	      ' ',
 	      _react2.default.createElement(
 	        'label',
-	        null,
+	        {
+	          __self: this
+	        },
 	        _react2.default.createElement('input', {
 	          type: 'checkbox',
 	          onChange: this.toggle.bind(this, 'exclusive'),
-	          checked: this.state.exclusive
+	          checked: this.state.exclusive,
+	          __self: this
 	        }),
 	        'exclusive'
 	      ),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement('br', null),
+	      _react2.default.createElement('br', {
+	        __self: this
+	      }),
+	      _react2.default.createElement('br', {
+	        __self: this
+	      }),
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
 	        {
 	          component: '',
 	          exclusive: this.state.exclusive,
 	          showProp: 'show',
-	          transitionName: 'fade'
+	          transitionName: 'fade',
+	          __self: this
 	        },
-	        _react2.default.createElement(Div, { show: this.state.enter, style: style })
+	        _react2.default.createElement(Div, { show: this.state.enter, style: style, __self: this
+	        })
 	      )
 	    );
 	  };
@@ -127,7 +142,9 @@ webpackJsonp([2],{
 	  return Demo;
 	}(_react.Component);
 	
-	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
+	_reactDom2.default.render(_react2.default.createElement(Demo, {
+	  __self: undefined
+	}), document.getElementById('__react-content'));
 
 /***/ },
 

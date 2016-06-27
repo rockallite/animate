@@ -57,16 +57,20 @@ webpackJsonp([8],{
 	    var text = this.state.enter ? 'ON' : 'OFF';
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
 	        {
 	          transitionLeave: false,
-	          transitionName: 'fade'
+	          transitionName: 'fade',
+	          __self: this
 	        },
 	        _react2.default.createElement(
 	          'button',
-	          { key: text, onClick: this.toggleAnimate },
+	          { key: text, onClick: this.toggleAnimate, __self: this
+	          },
 	          text
 	        )
 	      )
@@ -74,7 +78,9 @@ webpackJsonp([8],{
 	  }
 	});
 	
-	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
+	_reactDom2.default.render(_react2.default.createElement(Demo, {
+	  __self: undefined
+	}), document.getElementById('__react-content'));
 
 /***/ }
 

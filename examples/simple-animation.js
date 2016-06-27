@@ -55,7 +55,8 @@ webpackJsonp([3],{
 	      height: '200px',
 	      backgroundColor: 'red'
 	    };
-	    return _react2.default.createElement('div', { style: style });
+	    return _react2.default.createElement('div', { style: style, __self: this
+	    });
 	  }
 	});
 	
@@ -136,51 +137,68 @@ webpackJsonp([3],{
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        'label',
-	        null,
+	        {
+	          __self: this
+	        },
 	        _react2.default.createElement('input', {
 	          type: 'checkbox',
 	          onChange: this.toggle.bind(this, 'visible'),
-	          checked: this.state.visible
+	          checked: this.state.visible,
+	          __self: this
 	        }),
 	        'show'
 	      ),
 	      ' ',
 	      _react2.default.createElement(
 	        'label',
-	        null,
+	        {
+	          __self: this
+	        },
 	        _react2.default.createElement('input', {
 	          type: 'checkbox',
 	          onChange: this.toggle.bind(this, 'exclusive'),
-	          checked: this.state.exclusive
+	          checked: this.state.exclusive,
+	          __self: this
 	        }),
 	        'exclusive'
 	      ),
 	      ' ',
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: this.destroy },
+	        { onClick: this.destroy, __self: this
+	        },
 	        'destroy'
 	      ),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement('br', null),
+	      _react2.default.createElement('br', {
+	        __self: this
+	      }),
+	      _react2.default.createElement('br', {
+	        __self: this
+	      }),
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
 	        {
 	          component: '',
 	          exclusive: this.state.exclusive,
 	          showProp: 'visible',
-	          animation: anim
+	          animation: anim,
+	          __self: this
 	        },
-	        this.state.destroyed ? null : _react2.default.createElement(Box, { visible: this.state.visible })
+	        this.state.destroyed ? null : _react2.default.createElement(Box, { visible: this.state.visible, __self: this
+	        })
 	      )
 	    );
 	  }
 	});
 	
-	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
+	_reactDom2.default.render(_react2.default.createElement(Demo, {
+	  __self: undefined
+	}), document.getElementById('__react-content'));
 
 /***/ },
 

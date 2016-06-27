@@ -20415,6 +20415,8 @@
 	  value: true
 	});
 	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
 	var _react = __webpack_require__(3);
 	
 	var _react2 = _interopRequireDefault(_react);
@@ -20682,6 +20684,8 @@
 	    }
 	  },
 	  render: function render() {
+	    var _this3 = this;
+	
 	    var props = this.props;
 	    this.nextProps = props;
 	    var stateChildren = this.state.children;
@@ -20703,7 +20707,8 @@
 	            transitionName: props.transitionName,
 	            transitionEnter: props.transitionEnter,
 	            transitionAppear: props.transitionAppear,
-	            transitionLeave: props.transitionLeave
+	            transitionLeave: props.transitionLeave,
+	            __self: _this3
 	          },
 	          child
 	        );
@@ -20713,7 +20718,9 @@
 	    if (Component) {
 	      return _react2.default.createElement(
 	        Component,
-	        this.props,
+	        _extends({}, this.props, {
+	          __self: this
+	        }),
 	        children
 	      );
 	    }

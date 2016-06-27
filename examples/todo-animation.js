@@ -3962,7 +3962,8 @@ webpackJsonp([6],{
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      { onClick: this.props.onClick, style: style },
+	      { onClick: this.props.onClick, style: style, __self: this
+	      },
 	      props.children
 	    );
 	  }
@@ -4037,7 +4038,8 @@ webpackJsonp([6],{
 	    var items = this.state.items.map(function (item, i) {
 	      return _react2.default.createElement(
 	        Todo,
-	        { key: item, onClick: _this.handleRemove.bind(_this, i) },
+	        { key: item, onClick: _this.handleRemove.bind(_this, i), __self: _this
+	        },
 	        item
 	      );
 	    });
@@ -4047,30 +4049,41 @@ webpackJsonp([6],{
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: this.handleAdd },
+	        { onClick: this.handleAdd, __self: this
+	        },
 	        'Add Item'
 	      ),
 	      ' ',
 	      _react2.default.createElement(
 	        'label',
-	        null,
+	        {
+	          __self: this
+	        },
 	        _react2.default.createElement('input', {
 	          type: 'checkbox',
 	          onChange: this.toggle.bind(this, 'exclusive'),
-	          checked: this.state.exclusive
+	          checked: this.state.exclusive,
+	          __self: this
 	        }),
 	        'exclusive'
 	      ),
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement('br', null),
+	      _react2.default.createElement('br', {
+	        __self: this
+	      }),
+	      _react2.default.createElement('br', {
+	        __self: this
+	      }),
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
 	        {
 	          exclusive: this.state.exclusive,
-	          animation: anim
+	          animation: anim,
+	          __self: this
 	        },
 	        items
 	      )
@@ -4080,13 +4093,19 @@ webpackJsonp([6],{
 	
 	_reactDom2.default.render(_react2.default.createElement(
 	  'div',
-	  null,
+	  {
+	    __self: undefined
+	  },
 	  _react2.default.createElement(
 	    'h2',
-	    null,
+	    {
+	      __self: undefined
+	    },
 	    'Todo'
 	  ),
-	  _react2.default.createElement(TodoList, null)
+	  _react2.default.createElement(TodoList, {
+	    __self: undefined
+	  })
 	), document.getElementById('__react-content'));
 
 /***/ }

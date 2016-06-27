@@ -60,25 +60,32 @@ webpackJsonp([4],{
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: this.toggleAnimate },
+	        { onClick: this.toggleAnimate, __self: this
+	        },
 	        'toggle'
 	      ),
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
 	        {
 	          component: '',
-	          transitionName: 'fade'
+	          transitionName: 'fade',
+	          __self: this
 	        },
-	        this.state.enter ? _react2.default.createElement('div', { key: '1', style: style }) : null
+	        this.state.enter ? _react2.default.createElement('div', { key: '1', style: style, __self: this
+	        }) : null
 	      )
 	    );
 	  }
 	});
 	
-	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
+	_reactDom2.default.render(_react2.default.createElement(Demo, {
+	  __self: undefined
+	}), document.getElementById('__react-content'));
 
 /***/ }
 

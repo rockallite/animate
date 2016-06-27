@@ -72,7 +72,8 @@ webpackJsonp([1],{
 	      'div',
 	      {
 	        onClick: this.props.onClick,
-	        style: style
+	        style: style,
+	        __self: this
 	      },
 	      props.children
 	    );
@@ -107,19 +108,23 @@ webpackJsonp([1],{
 	        {
 	          key: item.content,
 	          visible: item.visible,
-	          onClick: _this.handleHide.bind(_this, i, item)
+	          onClick: _this.handleHide.bind(_this, i, item),
+	          __self: _this
 	        },
 	        item.content
 	      );
 	    });
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
 	        {
 	          showProp: 'visible',
-	          transitionName: 'fade'
+	          transitionName: 'fade',
+	          __self: this
 	        },
 	        items
 	      )
@@ -129,13 +134,19 @@ webpackJsonp([1],{
 	
 	_reactDom2.default.render(_react2.default.createElement(
 	  'div',
-	  null,
+	  {
+	    __self: undefined
+	  },
 	  _react2.default.createElement(
 	    'h2',
-	    null,
+	    {
+	      __self: undefined
+	    },
 	    'Hide Todo'
 	  ),
-	  _react2.default.createElement(TodoList, null)
+	  _react2.default.createElement(TodoList, {
+	    __self: undefined
+	  })
 	), document.getElementById('__react-content'));
 
 /***/ }

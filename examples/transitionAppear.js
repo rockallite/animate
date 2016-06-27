@@ -53,7 +53,8 @@ webpackJsonp([7],{
 	      height: '200px',
 	      backgroundColor: 'red'
 	    };
-	    return _react2.default.createElement('div', { style: style });
+	    return _react2.default.createElement('div', { style: style, __self: this
+	    });
 	  }
 	});
 	
@@ -81,10 +82,13 @@ webpackJsonp([7],{
 	  render: function render() {
 	    return _react2.default.createElement(
 	      'div',
-	      null,
+	      {
+	        __self: this
+	      },
 	      _react2.default.createElement(
 	        'button',
-	        { onClick: this.toggleAnimate },
+	        { onClick: this.toggleAnimate, __self: this
+	        },
 	        'toggle'
 	      ),
 	      _react2.default.createElement(
@@ -96,15 +100,19 @@ webpackJsonp([7],{
 	          onEnter: this.onEnter,
 	          onLeave: this.onLeave,
 	          transitionAppear: true,
-	          transitionName: 'fade'
+	          transitionName: 'fade',
+	          __self: this
 	        },
-	        _react2.default.createElement(Box, { visible: this.state.visible })
+	        _react2.default.createElement(Box, { visible: this.state.visible, __self: this
+	        })
 	      )
 	    );
 	  }
 	});
 	
-	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
+	_reactDom2.default.render(_react2.default.createElement(Demo, {
+	  __self: undefined
+	}), document.getElementById('__react-content'));
 
 /***/ }
 

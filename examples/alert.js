@@ -66,7 +66,8 @@ webpackJsonp([0],[
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      { style: style },
+	      { style: style, __self: this
+	      },
 	      props.str
 	    );
 	  }
@@ -106,6 +107,8 @@ webpackJsonp([0],[
 	    });
 	  },
 	  render: function render() {
+	    var _this = this;
+	
 	    var alerts = this.state.alerts;
 	    var self = this;
 	    var children = alerts.map(function (a) {
@@ -113,7 +116,8 @@ webpackJsonp([0],[
 	        seed++;
 	        a.key = String(seed);
 	      }
-	      return _react2.default.createElement(Alert, _extends({}, a, { onEnd: self.onEnd.bind(self, a.key) }));
+	      return _react2.default.createElement(Alert, _extends({}, a, { onEnd: self.onEnd.bind(self, a.key), __self: _this
+	      }));
 	    });
 	    var style = {
 	      position: 'fixed',
@@ -123,10 +127,12 @@ webpackJsonp([0],[
 	    };
 	    return _react2.default.createElement(
 	      'div',
-	      { style: style },
+	      { style: style, __self: this
+	      },
 	      _react2.default.createElement(
 	        _rcAnimate2.default,
-	        { transitionName: 'fade' },
+	        { transitionName: 'fade', __self: this
+	        },
 	        children
 	      )
 	    );
@@ -139,7 +145,9 @@ webpackJsonp([0],[
 	  if (!alertGroup) {
 	    var div = document.createElement('div');
 	    document.body.appendChild(div);
-	    alertGroup = _reactDom2.default.render(_react2.default.createElement(AlertGroup, null), div);
+	    alertGroup = _reactDom2.default.render(_react2.default.createElement(AlertGroup, {
+	      __self: this
+	    }), div);
 	  }
 	  alertGroup.addAlert({
 	    str: str,
@@ -165,15 +173,20 @@ webpackJsonp([0],[
 	
 	_reactDom2.default.render(_react2.default.createElement(
 	  'div',
-	  null,
+	  {
+	    __self: undefined
+	  },
 	  _react2.default.createElement(
 	    'h2',
-	    null,
+	    {
+	      __self: undefined
+	    },
 	    'notification'
 	  ),
 	  _react2.default.createElement(
 	    'button',
-	    { onClick: onClick },
+	    { onClick: onClick, __self: undefined
+	    },
 	    'show notification'
 	  )
 	), document.getElementById('__react-content'));
